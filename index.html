@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App -TypeScript</title>
+    <link
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- Form -->
+    <section>
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-md-6 offset-md-3">
+            <h2 class="mb-5">create Todo</h2>
+            <form id="todo-form">
+              <div class="mb-3">
+                <label for="title" class="form-label">
+                  <h5>Title</h5>
+                </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="title"
+                  placeholder=""
+                />
+                <p id="title-error" class="form-text text-danger"></p>
+              </div>
+              <button type="submit" class="btn btn-primary">Add</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tabel -->
+    <section>
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-md-6 offset-md-3">
+            <table class="table align-middle">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Title</th>
+                  <th scope="col">Delete</th>
+                </tr>
+              </thead>
+              <tbody id="todo-list"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./dist/app.js"></script>
+  </body>
+</html>
